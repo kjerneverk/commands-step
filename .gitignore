@@ -1,0 +1,17 @@
+*~
+.env 
+dist
+node_modules
+*.log
+.vscode
+coverage/
+test/
+output/
+input/
+processed/.DS_Store
+**/.DS_Store
+package-lock.json
+processed/
+output/**
+agentic-*.md.kodrdriv-test-cache.json
+agentic-*.md
