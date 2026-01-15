@@ -21,7 +21,7 @@
     "test:coverage": "vitest run --coverage",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "precommit": "npm run lint && npm run test",
+    "precommit": "npm run build && npm run lint && npm run test",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "author": "Tim O'Brien <tobrien@discursive.com>",
