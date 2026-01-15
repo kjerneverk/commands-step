@@ -22,3 +22,5 @@ npm install @riotprompt/riotplan-commands-step
 ## License
 
 Apache-2.0
+
+<!-- v1.0.0 -->
