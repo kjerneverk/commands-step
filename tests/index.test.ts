@@ -31,7 +31,7 @@ const mockSkipStep = vi.fn();
 const mockUpdateStatus = vi.fn();
 const mockGenerateStatus = vi.fn();
 
-vi.mock('@riotprompt/riotplan', () => ({
+vi.mock('@kjerneverk/riotplan', () => ({
     loadPlan: (...args: unknown[]) => mockLoadPlan(...args),
     insertStep: (...args: unknown[]) => mockInsertStep(...args),
     removeStep: (...args: unknown[]) => mockRemoveStep(...args),
@@ -78,7 +78,7 @@ describe('commands-step', () => {
             renamedFiles: [],
         });
         mockStartStep.mockReturnValue({ number: 2, title: 'Step 2' });
-        mockCompleteStep.mockReturnValue({ number: 2, title: 'Step 2' });
+        mockCompleteStep.mockResolvedValue({ number: 2, title: 'Step 2' });
         mockBlockStep.mockReturnValue({ number: 2, title: 'Step 2' });
         mockUnblockStep.mockReturnValue({ number: 2, title: 'Step 2' });
         mockSkipStep.mockReturnValue({ number: 2, title: 'Step 2' });
@@ -282,7 +282,7 @@ describe('commands-step', () => {
         });
 
         it('step complete should handle errors', async () => {
-            mockCompleteStep.mockImplementation(() => { throw new Error('Complete failed'); });
+            mockCompleteStep.mockRejectedValue(new Error('Complete failed'));
             const program = new Command();
             program.exitOverride();
             registerStepCommands(program);
