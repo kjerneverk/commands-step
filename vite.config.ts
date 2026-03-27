@@ -18,7 +18,7 @@ export default defineConfig({
             fileName: () => 'index.js',
         },
         rollupOptions: {
-            external: [/^@riotprompt\//, 'commander', 'chalk', 'node:path', 'node:fs/promises'],
+            external: [/^@kjerneverk\//, 'commander', 'chalk', 'node:path', 'node:fs/promises'],
             output: {
                 format: 'esm',
                 preserveModules: true,
