@@ -183,7 +183,7 @@ export function registerStepCommands(program: Command): void {
                     stepStatus: "in_progress",
                 });
 
-                const statusContent = generateStatus(updatedPlan);
+                const statusContent = await generateStatus(updatedPlan);
                 await writeFile(join(path, "STATUS.md"), statusContent);
 
                 // eslint-disable-next-line no-console
@@ -206,14 +206,14 @@ export function registerStepCommands(program: Command): void {
             try {
                 const stepNum = parseInt(number);
                 const plan = await loadPlan(path);
-                const updatedStep = completeStep(plan, stepNum, options.notes);
+                const updatedStep = await completeStep(plan, stepNum, options.notes);
 
                 const updatedPlan = updateStatus(plan, {
                     step: stepNum,
                     stepStatus: "completed",
                 });
 
-                const statusContent = generateStatus(updatedPlan);
+                const statusContent = await generateStatus(updatedPlan);
                 await writeFile(join(path, "STATUS.md"), statusContent);
 
                 // eslint-disable-next-line no-console
@@ -243,7 +243,7 @@ export function registerStepCommands(program: Command): void {
                     stepStatus: "blocked",
                 });
 
-                const statusContent = generateStatus(updatedPlan);
+                const statusContent = await generateStatus(updatedPlan);
                 await writeFile(join(path, "STATUS.md"), statusContent);
 
                 // eslint-disable-next-line no-console
@@ -274,7 +274,7 @@ export function registerStepCommands(program: Command): void {
                     stepStatus: "pending",
                 });
 
-                const statusContent = generateStatus(updatedPlan);
+                const statusContent = await generateStatus(updatedPlan);
                 await writeFile(join(path, "STATUS.md"), statusContent);
 
                 // eslint-disable-next-line no-console
@@ -304,7 +304,7 @@ export function registerStepCommands(program: Command): void {
                     stepStatus: "skipped",
                 });
 
-                const statusContent = generateStatus(updatedPlan);
+                const statusContent = await generateStatus(updatedPlan);
                 await writeFile(join(path, "STATUS.md"), statusContent);
 
                 // eslint-disable-next-line no-console
