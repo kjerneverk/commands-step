@@ -1,5 +1,5 @@
 /**
- * @riotprompt/riotplan-commands-step
+ * @kjerneverk/riotplan-commands-step
  * 
  * Step management commands for RiotPlan CLI
  */
@@ -17,8 +17,8 @@ import {
     skipStep,
     updateStatus,
     generateStatus,
-} from "@riotprompt/riotplan";
-import type { PlanStep } from "@riotprompt/riotplan";
+} from "@kjerneverk/riotplan";
+import type { PlanStep } from "@kjerneverk/riotplan";
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
