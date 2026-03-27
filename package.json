@@ -1,6 +1,6 @@
 {
   "name": "@riotprompt/riotplan-commands-step",
-  "version": "1.0.0-dev.0",
+  "version": "1.0.0",
   "description": "Step management commands for RiotPlan CLI",
   "type": "module",
   "main": "./dist/index.js",
