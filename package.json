@@ -1,6 +1,6 @@
 {
   "name": "@kjerneverk/riotplan-commands-step",
-  "version": "1.0.3",
+  "version": "1.0.4-dev.0",
   "description": "Step management commands for RiotPlan CLI",
   "type": "module",
   "main": "./dist/index.js",
