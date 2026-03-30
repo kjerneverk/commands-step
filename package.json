@@ -1,6 +1,6 @@
 {
   "name": "@kjerneverk/riotplan-commands-step",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Step management commands for RiotPlan CLI",
   "type": "module",
   "main": "./dist/index.js",
@@ -27,7 +27,7 @@
   "author": "Tim O'Brien <tobrien@discursive.com>",
   "license": "Apache-2.0",
   "peerDependencies": {
-    "@kjerneverk/riotplan": "^1.0.0",
+    "@kjerneverk/riotplan": "^1.0.31",
     "commander": "^13.0.0"
   },
   "dependencies": {
@@ -36,7 +36,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.22.0",
-    "@kjerneverk/riotplan": "^1.0.6",
+    "@kjerneverk/riotplan": "^1.0.31",
     "@types/node": "^22.15.17",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
